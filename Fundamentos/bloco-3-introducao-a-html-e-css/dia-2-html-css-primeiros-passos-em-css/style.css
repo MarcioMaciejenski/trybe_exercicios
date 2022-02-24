@@ -1,0 +1,31 @@
+h1 {
+    font-size: 65;
+    color: orange;
+    font-family: sans-serif;
+    font-style: oblique;
+    text-align: center;       
+}
+
+ul {
+    background-color: skyblue;
+}
+
+.favorite-color{
+    background-color: gray;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+body {
+    font-size: 16px;
+}
+
+li{
+    line-height: 25px;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: darkslategray;
+}
