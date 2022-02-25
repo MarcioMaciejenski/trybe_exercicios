@@ -13,3 +13,11 @@ li:active {
 li {
     list-style: none;
 }
+
+.lists {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(230,200,100);
+}
