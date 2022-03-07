@@ -1,11 +1,26 @@
-const ang1 = 10;
-const ang2 = 40;
-const ang3 = 70;
+let pecaXadrez = "CAVALO";
 
-if ((ang1 < 0) || (ang2 < 0) || (ang3 < 0)) {
-    console.log("False,ângulo inválido.");
-}else if(ang1+ang2+ang3 > 180) {
-    console.log("False");
-}else {
-    console.log("True");
-}
+//função toLowerCase transforma a string em minuscúla sem modificar a original.
+switch (pecaXadrez.toLowerCase()) {
+    case "rei":
+        console.log("Rei- anda uma casa em qualquer direção.");
+        break;
+    case "bispo":
+        console.log("Bispo- anda em diagonal.");
+        break;
+    case "rainha":
+        console.log("Rainha- anda diagonal,horizontal, vertical.");
+        break;
+    case 'cavalo':
+        console.log('Cavalo -> "L" pode pular sobre as peças.');
+        break;
+    case 'torre':
+        console.log('Torre -> Horizontal e vertical.');
+        break;
+    case 'peão':
+        console.log("Peão -> Apenas uma casa para frente, no primeiro movimento podem ser duas casas.");
+        break;
+    default:
+        console.log('Erro, peça inválida!');
+        break;
+};
