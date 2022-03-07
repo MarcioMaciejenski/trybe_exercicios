@@ -1,17 +1,8 @@
-const a = 10;
-const b = 5;
+const num1 = 10;
+const num2 = 25;
 
-//soma
-console.log(a+b);
-
-//subtração
-console.log(a-b);
-
-//multiplicação
-console.log(a*b);
-
-//divisão
-console.log(a/b);
-
-//Módulo
-console.log(a%b);
+if (num1 > num2) {
+    console.log(num1 ,"é maior do que", num2);
+}else {
+    console.log(num2, "é maior do que", num1);
+}
