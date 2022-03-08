@@ -21,8 +21,8 @@ let resultSoma = 0;
 let qntdIndice = 0;
 let mediaAritmetica = 0;
 
-for(let index2 = 0; index2 < numbers2.length; index2 += 1) {
-    resultSoma += numbers2[index2];
+for(let index2 = 0; index2 < numbers3.length; index2 += 1) {
+    resultSoma += numbers3[index2];
     qntdIndice += 1;
 }
 
@@ -41,3 +41,23 @@ for (let index = 0; index < num.length; index += 1) {
 let average = sum / num.length;
 
 console.log(average);
+
+//exercicio 4 - verifica se médaia aritmética é maior ou menor do que 20.
+let numbers3 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let resultSoma1 = 0;
+let qntdIndice1 = 0;
+let mediaAritmetica1 = 0;
+
+for(let index2 = 0; index2 < numbers3.length; index2 += 1) {
+    resultSoma1 += numbers3[index2];
+    qntdIndice1 += 1;
+}
+
+mediaAritmetica1 = resultSoma1 / qntdIndice1;
+
+if(mediaAritmetica1 > 20) {
+    console.log('A média aritmética é maior do que 20. Média:', mediaAritmetica1);
+}else{
+    console.log('A média aritmética é menor do que 20. Média:', mediaAritmetica1);
+}
+
