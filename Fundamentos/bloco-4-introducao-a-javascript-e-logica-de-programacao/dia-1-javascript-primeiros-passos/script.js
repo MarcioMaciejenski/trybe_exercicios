@@ -52,7 +52,20 @@ const number3 = 17;
 
 let isEven = false;
 
-if ((number1 % 2 == 0) || (number2 % 2 == 0) || (number3 % 2 == 0)) {
+if ((number1 % 2 === 0) || (number2 % 2 === 0) || (number3 % 2 === 0)) {
   isEven = true;
 }
   console.log(isEven);
+
+  //exercicio 9
+const number_1 = 15;
+const number_2 = 12;
+const number_3 = 19;
+
+let isOdd = false;
+
+if ((number_1 % 2 !== 0) || (number_2 % 2 !== 0) || (number_3 % 2 !== 0)) {
+  isOdd = true;
+}
+  console.log(isOdd);
+
