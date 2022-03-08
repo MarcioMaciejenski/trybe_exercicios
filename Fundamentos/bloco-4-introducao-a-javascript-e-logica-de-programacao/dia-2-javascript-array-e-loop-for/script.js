@@ -72,3 +72,19 @@ for(let index4 = 0 ; index4 < numbers4.length; index4 += 1) {
 }
 
 console.log('O maior número do array é:', maior);
+
+//exercicio 6 - verificar valores impares do array.
+let numbers5 = [5, 9, 3, 90, 70, 8, 100, 2, 35, 27];
+let numbersImpar = 0;
+
+for(let index5 = 0; index5 < numbers5.length; index5 += 1) {
+    if(numbers5[index5] % 2 !== 0) {
+        numbersImpar += 1;
+    }
+}
+
+if (numbersImpar !== 0) {
+    console.log('O array contém ', numbersImpar,'números ímpares.')
+}else {
+    console.log('Nenhum valor ímpar encontrado.');
+}
