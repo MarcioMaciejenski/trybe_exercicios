@@ -44,3 +44,15 @@ if (nota < 0 || nota > 100) {
   } else {
     console.log("F");
   }
+
+  //exercicio 8
+const number1 = 14;
+const number2 = 15;
+const number3 = 17;
+
+let isEven = false;
+
+if ((number1 % 2 == 0) || (number2 % 2 == 0) || (number3 % 2 == 0)) {
+  isEven = true;
+}
+  console.log(isEven);
