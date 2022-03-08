@@ -21,8 +21,8 @@ let resultSoma = 0;
 let qntdIndice = 0;
 let mediaAritmetica = 0;
 
-for(let index2 = 0; index2 < numbers3.length; index2 += 1) {
-    resultSoma += numbers3[index2];
+for(let index2 = 0; index2 < numbers2.length; index2 += 1) {
+    resultSoma += numbers2[index2];
     qntdIndice += 1;
 }
 
@@ -48,8 +48,8 @@ let resultSoma1 = 0;
 let qntdIndice1 = 0;
 let mediaAritmetica1 = 0;
 
-for(let index2 = 0; index2 < numbers3.length; index2 += 1) {
-    resultSoma1 += numbers3[index2];
+for(let index3 = 0; index3 < numbers3.length; index3 += 1) {
+    resultSoma1 += numbers3[index3];
     qntdIndice1 += 1;
 }
 
@@ -61,3 +61,14 @@ if(mediaAritmetica1 > 20) {
     console.log('A média aritmética é menor do que 20. Média:', mediaAritmetica1);
 }
 
+//exercicio 5 - verificar maior número do array
+let numbers4 = [5, 9, 3, 90, 70, 8, 100, 2, 35, 27];
+let maior = 0;//variável que armazena o maior número.
+
+for(let index4 = 0 ; index4 < numbers4.length; index4 += 1) {
+    if(numbers4[index4] > maior){//testa qual é o maior e armazena.
+        maior = numbers4[index4];
+    }
+}
+
+console.log('O maior número do array é:', maior);
