@@ -37,3 +37,21 @@ let newInfo = {
 for(let key2 in info , newInfo) {
     console.log(info[key2],'e',newInfo[key2]);
 }
+console.log('----------------------------------');
+
+//exercicio 6 - acessar chaves e montar um texto
+let leitor = {
+    nome: 'Julia',
+    sobrenome: 'Pessoa',
+    idade: 21,
+    livrosFavoritos: [
+      {
+        titulo: 'O Pior Dia de Todos',
+        autor: 'Daniela Kopsch',
+        editora: 'Tordesilhas',
+      }
+    ],
+  };
+  
+  console.log('O livro favorito de', leitor.nome, leitor.sobrenome,'se chama', leitor.livrosFavoritos.titulo +'.');
+  
