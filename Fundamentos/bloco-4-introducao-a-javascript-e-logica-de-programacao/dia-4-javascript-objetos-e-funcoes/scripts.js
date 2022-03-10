@@ -12,3 +12,7 @@ let info = {
 
  console.log(info);
 
+// exercicio 3 - for/in  mostra todas as chaves do objeto.
+for(let key in info){
+    console.log(key);
+}
