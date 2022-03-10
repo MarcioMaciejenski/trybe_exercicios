@@ -16,3 +16,8 @@ let info = {
 for(let key in info){
     console.log(key);
 }
+
+//exercicio 4 - for/in mostra valores das chaves do objeto
+for(let key1 in info) {
+    console.log(info[key1]);
+}
