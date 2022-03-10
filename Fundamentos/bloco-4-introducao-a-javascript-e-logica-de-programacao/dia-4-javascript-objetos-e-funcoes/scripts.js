@@ -67,3 +67,7 @@ leitor.livrosFavoritos.push(
 );
 
 console.log(leitor);
+console.log('----------------------------------');
+
+//exercicio 8 - acessar as chaves nomes e livrosFavoritos
+console.log(leitor.nome,'tem',leitor.livrosFavoritos.length,'livros favoritos');
