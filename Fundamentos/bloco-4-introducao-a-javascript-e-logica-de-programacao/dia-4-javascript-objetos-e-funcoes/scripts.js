@@ -59,15 +59,34 @@ console.log('----------------------------------');
 
 //exercicio 7 - adicionar mais um livro favorito
 leitor.livrosFavoritos.push(
-{
-    titulo: 'Harry Potter e o Prisioneiro de Azkaban',
-    autor: 'JK Rowling',
-    editora: 'Rocco',
-},
+    {
+        titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+        autor: 'JK Rowling',
+        editora: 'Rocco',
+    },
 );
 
 console.log(leitor);
 console.log('----------------------------------');
 
 //exercicio 8 - acessar as chaves nomes e livrosFavoritos
-console.log(leitor.nome,'tem',leitor.livrosFavoritos.length,'livros favoritos');
+console.log(leitor.nome, 'tem', leitor.livrosFavoritos.length, 'livros favoritos');
+
+//FUNÇÔES
+//exercicio 1 - criar função e palíndromo
+
+function verificaPalindrome(palavra) {
+    let separaPalavra = palavra.split("");//separa as letras da palavra.
+
+    let invertePalavra = separaPalavra.reverse();//inverte a ordem das letras
+
+    let unePalavraInvertida = invertePalavra.join('');//une as letras, usar ('') para tirar a vírgula da separação
+
+    if (unePalavraInvertida === palavra) {
+        return 'true'
+    }
+    return 'false'
+}
+
+console.log(verificaPalindrome('arara'));
+console.log(verificaPalindrome('desenvolvimento'));
