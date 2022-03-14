@@ -79,7 +79,13 @@
         }
         corDivCentral();
 
-/*4*/  document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
+        /*4*/
+        function corrigeTitulo(tag, texto) {
+            const titulo = document.getElementsByTagName(tag)[0];
+            titulo.innerText = texto;
+        }
+        corrigeTitulo('h1', 'Exercício 5.1 - JavaScript');
+
 /*5*/  document.getElementsByTagName('p')[0].innerHTML = toLowerCase('p'[0]);
 /*6*/  console.log
     </script>
