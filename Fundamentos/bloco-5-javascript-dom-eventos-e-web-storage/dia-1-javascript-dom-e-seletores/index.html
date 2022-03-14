@@ -57,7 +57,7 @@
  5-Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  6-Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-/*1*/
+        /*1*/
         function insereTexto(paragrafo) {
             const text = document.getElementsByTagName(paragrafo)[1];
             text.innerHTML = 'Daqui dois anos estarei trabalhando como desenvolvedor web.';
@@ -65,14 +65,20 @@
 
         insereTexto('p');
 
-/*2*/  
-        function corDivPrincipal(){
+        /*2*/
+        function corDivPrincipal() {
             const color = document.getElementsByClassName('main-content')[0];
             color.style.backgroundColor = 'rgb(76,164,19)';
         }
         corDivPrincipal();
-        
-/*3*/  document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
+
+        /*3*/
+        function corDivCentral() {
+            const color = document.getElementsByClassName('center-content')[0];
+            color.style.backgroundColor = 'white';
+        }
+        corDivCentral();
+
 /*4*/  document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
 /*5*/  document.getElementsByTagName('p')[0].innerHTML = toLowerCase('p'[0]);
 /*6*/  console.log
