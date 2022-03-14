@@ -90,3 +90,19 @@ function verificaPalindrome(palavra) {
 
 console.log(verificaPalindrome('arara'));
 console.log(verificaPalindrome('desenvolvimento'));
+console.log('----------------------------------');
+
+//exercicio 2 - retornar o indice de maior valor do array 
+
+let numerosInteiros = [22, 30, 6, 7, 10, 12];
+let comparar = 0;
+
+function maiorIndice(numeros) {
+    for (let index = 0; index <= numerosInteiros.length; index += 1) {
+        if (comparar < numerosInteiros[index]) {
+            comparar = index;
+        }
+    }
+    return comparar
+}
+console.log(maiorIndice(numerosInteiros));
