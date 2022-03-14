@@ -65,7 +65,13 @@
 
         insereTexto('p');
 
-/*2*/  document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,19)';
+/*2*/  
+        function corDivPrincipal(){
+            const color = document.getElementsByClassName('main-content')[0];
+            color.style.backgroundColor = 'rgb(76,164,19)';
+        }
+        corDivPrincipal();
+        
 /*3*/  document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
 /*4*/  document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
 /*5*/  document.getElementsByTagName('p')[0].innerHTML = toLowerCase('p'[0]);
