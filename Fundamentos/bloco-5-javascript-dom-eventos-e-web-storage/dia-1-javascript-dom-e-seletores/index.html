@@ -86,7 +86,13 @@
         }
         corrigeTitulo('h1', 'Exercício 5.1 - JavaScript');
 
-/*5*/  document.getElementsByTagName('p')[0].innerHTML = toLowerCase('p'[0]);
+        /*5*/
+        function letraMaiuscula() {
+            const texto = document.getElementsByTagName('p')[0];
+            texto.innerHTML = texto.innerHTML.toLocaleUpperCase();
+        }
+        letraMaiuscula();
+
 /*6*/  console.log
     </script>
 </body>
