@@ -72,6 +72,12 @@
       section.className = 'center-content'; // atribui classe a tag section
       const main1 = document.querySelector('.main-content'); // associa a tag main a uma constante
       main1.appendChild(section); // cria a tag section como filha da main
+      
+      // 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto
+      const tagP = document.createElement('p');
+      tagP.innerText = 'Estamos no bloco 5.';
+      const section1 = document.querySelector('.center-content');
+      section1.appendChild(tagP);
 
     </script>
   </body>
