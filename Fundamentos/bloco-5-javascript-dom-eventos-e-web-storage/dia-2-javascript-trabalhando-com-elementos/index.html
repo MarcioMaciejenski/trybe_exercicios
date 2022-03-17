@@ -116,7 +116,7 @@
     section6.appendChild(listTag);
 
     // 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.    
-    for(let index = 0; index <= 2; index += 1) {
+    for (let index = 0; index <= 2; index += 1) {
       const tagH3 = document.createElement('h3');
       const main2 = document.querySelector('.main-content');
       main2.appendChild(tagH3);
@@ -127,6 +127,12 @@
     const classTitle = document.getElementById('h1');
     classTitle.className = 'title';
 
+    // 2 - Adicione a classe description nas 3 tags h3 criadas
+    const h3 = document.getElementsByTagName('h3');
+
+    for (let index = 0; index < 3; index += 1) {
+      h3[index].className = 'description';
+    }
   </script>
 </body>
 
