@@ -67,7 +67,14 @@ function mudaCor() {
 const botaoFeriados = document.getElementById('btn-holiday');
 botaoFeriados.addEventListener('click', mudaCor);
 
-
-
+// 4 - Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+function insereTexto(sexta){
+  const elemPai = document.querySelector('.buttons-container');
+  const btnSexta = document.createElement('button');
+  btnSexta.id = 'btn-friday';
+  btnSexta.innerText = sexta;
+  elemPai.appendChild(btnSexta);
+}
+insereTexto('Sexta-feira');
 
 
