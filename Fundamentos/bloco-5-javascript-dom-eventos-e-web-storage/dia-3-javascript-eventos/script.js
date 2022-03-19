@@ -30,10 +30,22 @@ function calendarDez(days) {
     if (li.innerText === '24' || li.innerText === '25' || li.innerText === '31') {
       li.classList.add('holiday')
     }
-    if(li.innerText === '4' || li.innerText === '11' || li.innerText === '18' || li.innerText === '25') {
+    if (li.innerText === '4' || li.innerText === '11' || li.innerText === '18' || li.innerText === '25') {
       li.classList.add('friday');
     }
   }
 }
 
 calendarDez(dezDaysList)
+
+// 2 - Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+function criaBotao(feriados) {
+  const divPai = document.querySelector('.buttons-container'); //pai do elemento a ser criado
+  const botaoFeriado = document.createElement('button');// criado o botão
+  botaoFeriado.innerText = feriados;// adicionado texto ao botão
+  botaoFeriado.id = 'btn-holiday';// adicionado id ao botão
+  divPai.appendChild(botaoFeriado);// colocado o botão como filho de buttons-cointainer
+}
+
+criaBotao('Feriados');
+
