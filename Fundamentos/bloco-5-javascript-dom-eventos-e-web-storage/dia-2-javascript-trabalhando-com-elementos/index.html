@@ -139,12 +139,16 @@
     const selecionaPai = document.querySelector('main');
     selecionaPai.removeChild(selecionaFilho);
 
-    //4 - Centralize a section criado no passo 6 (aquele que possui a classe right-content ). 
-    //sDica: para centralizar, basta configurar o margin-right: auto da section ;
+    // 4 - Centralize a section criado no passo 6 (aquele que possui a classe right-content ). 
+    //Dica: para centralizar, basta configurar o margin-right: auto da section ;
     const centralizaSection = document.querySelector('.right-content');
-    console.log(centralizaSection);
+
     centralizaSection.style.marginRight = 'auto';
 
+    // 5 - Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a 
+    //classe center-content ) para a cor verde;
+    const elementoPai = document.querySelector('.main-content');
+    elementoPai.style.backgroundColor = 'green';
   </script>
 </body>
 
