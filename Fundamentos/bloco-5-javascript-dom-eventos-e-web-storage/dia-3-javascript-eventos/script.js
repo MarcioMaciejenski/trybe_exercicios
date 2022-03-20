@@ -95,3 +95,24 @@ function sextaFeira() {
 }
 
 selecionSexta.addEventListener('click', sextaFeira);
+
+// 6 - Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário,
+// o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+ 
+function zoom () {
+  const calendario = document.querySelector('#days'); // seleciona a ul aonde ficam os dias do calendário.
+  calendario.addEventListener('mouseover', function(event){ //utiliza uma função anônima com o parâmetro event para pegar o dia.
+    event.target.style.fontSize = '40px';
+    event.target.style.fontWeight = '400';
+  })
+};
+ function tamanhoNormal() {
+  const calendario = document.querySelector('#days');
+  calendario.addEventListener('mouseout', function(event){
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  })
+ };
+
+zoom();
+tamanhoNormal();
