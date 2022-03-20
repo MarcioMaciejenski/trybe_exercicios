@@ -56,9 +56,9 @@ function mudaCor() {
   const corNova = 'green';
 
   for (let index = 0; index < feriados.length; index += 1) {
-    if(feriados[index].style.backgroundColor === corNova) {
+    if (feriados[index].style.backgroundColor === corNova) {
       feriados[index].style.backgroundColor = corOriginal;
-    }else {
+    } else {
       feriados[index].style.backgroundColor = corNova;
     }
   }
@@ -68,7 +68,7 @@ const botaoFeriados = document.getElementById('btn-holiday');
 botaoFeriados.addEventListener('click', mudaCor);
 
 // 4 - Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
-function insereTexto(sexta){
+function insereTexto(sexta) {
   const elemPai = document.querySelector('.buttons-container');
   const btnSexta = document.createElement('button');
   btnSexta.id = 'btn-friday';
@@ -77,4 +77,21 @@ function insereTexto(sexta){
 }
 insereTexto('Sexta-feira');
 
+// 5 - Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+const selecionSexta = document.querySelector('#btn-friday');
 
+function sextaFeira() {
+  const dias = document.querySelectorAll('.friday');
+  const alteraSexta = 'Sextouu!';
+  const sexta = [4, 11, 18, 25];
+
+  for (let index = 0; index < dias.length; index += 1) {
+    if (dias[index].innerHTML === alteraSexta) {
+      dias[index].innerHTML = sexta[index];
+    } else {
+      dias[index].innerHTML = alteraSexta;
+    }
+  }
+}
+
+selecionSexta.addEventListener('click', sextaFeira);
