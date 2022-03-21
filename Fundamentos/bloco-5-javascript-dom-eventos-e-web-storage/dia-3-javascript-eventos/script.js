@@ -98,28 +98,28 @@ selecionSexta.addEventListener('click', sextaFeira);
 
 // 6 - Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário,
 // o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
- 
-function zoom () {
+
+function zoom() {
   const calendario = document.querySelector('#days'); // seleciona a ul aonde ficam os dias do calendário.
-  calendario.addEventListener('mouseover', function(event){ //utiliza uma função anônima com o parâmetro event para pegar o dia.
+  calendario.addEventListener('mouseover', function (event) { //utiliza uma função anônima com o parâmetro event para pegar o dia.
     event.target.style.fontSize = '40px';
     event.target.style.fontWeight = '400';
   })
 };
- function tamanhoNormal() {
+function tamanhoNormal() {
   const calendario = document.querySelector('#days');
-  calendario.addEventListener('mouseout', function(event){
+  calendario.addEventListener('mouseout', function (event) {
     event.target.style.fontSize = '20px';
     event.target.style.fontWeight = '200';
   })
- };
+};
 
 zoom();
 tamanhoNormal();
 
 // 7 - Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a 
 // string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
-function criaTarefa(tarefa){
+function criaTarefa(tarefa) {
   const listaTarefa = document.querySelector('.my-tasks');
   const novaTarefa = document.createElement('span');
   novaTarefa.innerText = tarefa;
@@ -129,7 +129,7 @@ criaTarefa('Estudar');
 
 // 8 -Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá 
 //receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
-function criaLegenda(cor){
+function criaLegenda(cor) {
   const elemPai = document.querySelector('.my-tasks');
   const novoElemento = document.createElement('div');
   novoElemento.className = 'task';
@@ -145,6 +145,21 @@ criaLegenda('blue');
 const corTarefa = document.querySelector('.task');
 
 function selecionaTarefa(event) {
- event.target.classList.add('selected');
+  event.target.classList.add('selected');
 }
 corTarefa.addEventListener('click', selecionaTarefa);
+
+// 10 - Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a 
+//cor da legenda da sua tarefa selecionada.
+const selecionaCalendario = document.querySelector('#days');
+
+function selecionaDia(event) {
+  const corPadrao = '';
+  const corTarefa = 'blue';
+  if (event.target.style.color === corTarefa) {
+    event.target.style.color = corPadrao;
+  } else {
+    event.target.style.color = corTarefa;
+  }
+}
+selecionaCalendario.addEventListener('click', selecionaDia);
