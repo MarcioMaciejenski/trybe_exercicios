@@ -14,47 +14,53 @@
 
     </header>
     <main>
-        <div>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Digite seu nome" required>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
-        </div>
-        <div>
-            <label for="">Escolha seu destino</label>
-            <label for="destino1">
-                <input type="radio" name="destino" id="destino1" value="cidade" checked>Cidade
-            </label>
-            <label for="destino2">
-                <input type="radio" name="destino" id="destino2" value="cidade">Campo
-            </label>
-            <label for="destino3">
-                <input type="radio" name="destino" id="destino3" value="praia">Praia
-            </label>
-            <label for="destino4">
-                <input type="radio" name="destino" id="destino4" value="montanhas">Montanhas
-            </label>
-        </div>
-        <div>
-            <label for="">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
-            <textarea name="texto-resposta" id="texto-resposta" cols="30" rows="6" maxlength="500"></textarea>
-        </div>
-        <div>
-            <label for="data">Qual a melhor data para fazer sua viagem?</label>
-            <input type="date" name="data-viagem" id="data">
-        </div>
-        <div>
-            <input type="checkbox" name="ofertas-trybe" id="ofertas" required>
-            <label for="ofertas">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
-        </div>
-        <div>
-            <input type="checkbox" name="imagens-ferias" id="imagens" required>
-            <label for="imagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
-                futuros.</label>
-        </div>
+        <form action="" method="get">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            </div>
+            <div>
+                <form action="" method="get">
+                    <label for="">Escolha seu destino</label>
+                    <label for="destino1">
+                        <input type="radio" name="destino" id="destino1" value="cidade" checked>Cidade
+                    </label>
+                    <label for="destino2">
+                        <input type="radio" name="destino" id="destino2" value="cidade">Campo
+                    </label>
+                    <label for="destino3">
+                        <input type="radio" name="destino" id="destino3" value="praia">Praia
+                    </label>
+                    <label for="destino4">
+                        <input type="radio" name="destino" id="destino4" value="montanhas">Montanhas
+                    </label>
+            </div>
+            <div>
+                <label for="">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+                <textarea name="texto-resposta" id="texto-resposta" cols="30" rows="6" maxlength="500"></textarea>
+            </div>
+            <div>
+                <label for="data">Qual a melhor data para fazer sua viagem?</label>
+                <input type="date" name="data-viagem" id="data">
+            </div>
+            <div>
+                <input type="checkbox" name="ofertas-trybe" id="ofertas" required>
+                <label for="ofertas">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            </div>
+            <div>
+                <input type="checkbox" name="imagens-ferias" id="imagens" required>
+                <label for="imagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de
+                    concursos
+                    futuros.</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
