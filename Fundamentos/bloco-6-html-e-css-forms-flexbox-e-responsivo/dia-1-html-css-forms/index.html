@@ -10,20 +10,20 @@
 </head>
 
 <body>
-    <header>
-
+    <header id="cabecalho">
+        <h1>Concorra a uma viagem</h1>
     </header>
     <main>
-        <form action="" method="get">
-            <div>
+        <form action="" method="get" class="formulario">
+            <div class="item-formulario">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" placeholder="Digite seu nome" required>
             </div>
-            <div>
+            <div class="item-formulario">
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" placeholder="Digite seu email" required>
             </div>
-            <div>
+            <div class="item-formulario">
                 <form action="" method="get">
                     <label for="">Escolha seu destino</label>
                     <label for="destino1">
@@ -39,19 +39,19 @@
                         <input type="radio" name="destino" id="destino4" value="montanhas">Montanhas
                     </label>
             </div>
-            <div>
+            <div class="item-formulario">
                 <label for="">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
                 <textarea name="texto-resposta" id="texto-resposta" cols="30" rows="6" maxlength="500"></textarea>
             </div>
-            <div>
+            <div class="item-formulario">
                 <label for="data">Qual a melhor data para fazer sua viagem?</label>
                 <input type="date" name="data-viagem" id="data">
             </div>
-            <div>
+            <div class="item-formulario">
                 <input type="checkbox" name="ofertas-trybe" id="ofertas" required>
                 <label for="ofertas">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
             </div>
-            <div>
+            <div class="item-formulario">
                 <input type="checkbox" name="imagens-ferias" id="imagens" required>
                 <label for="imagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de
                     concursos
