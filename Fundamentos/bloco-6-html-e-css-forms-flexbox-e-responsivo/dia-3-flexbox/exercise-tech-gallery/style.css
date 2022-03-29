@@ -28,3 +28,17 @@
    display: flex;
    justify-content: center;
  }
+
+ #first-technologies, #second-technologies {
+   display: flex;
+   justify-content: center;
+   padding-top: 10px;
+   width: 95%;
+ }
+
+.technologies {
+  background-color: rgb(221, 218, 218);
+  border-radius: 10%;
+  margin-right: 10px;
+  text-align: center;
+}
