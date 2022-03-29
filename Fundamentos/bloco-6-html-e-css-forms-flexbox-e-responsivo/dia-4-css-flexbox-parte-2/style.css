@@ -79,6 +79,8 @@
     flex-direction: column;
     margin: 20px;
     flex-basis: 350px;/*Exercício parte 2, n°1.*/
+    align-self: center;/*Exercício parte 2, n°2.*/
+    flex-grow: 1; /*Exercício parte 2, n°2.*/
   }
   
   .aside-container h3, h4 {
