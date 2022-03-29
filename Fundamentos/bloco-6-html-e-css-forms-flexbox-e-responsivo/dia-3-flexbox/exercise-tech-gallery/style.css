@@ -20,13 +20,16 @@
  #header {
    display: flex;
    justify-content: space-around;
+   align-items: center ;
    background-color: rgb(66, 65, 65);
    padding: 5px 0;
+   color: aliceblue;
  }
 
  #text-section {
    display: flex;
    justify-content: center;
+   margin: 10px 0;
  }
 
  #first-technologies, #second-technologies {
@@ -38,7 +41,21 @@
 
 .technologies {
   background-color: rgb(221, 218, 218);
-  border-radius: 10%;
+  border-radius: 15%;
   margin-right: 10px;
   text-align: center;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+hr {
+  width: 10%;
+  margin-left: 45%;
+  margin-top: 15px;
+  border: 5px solid rgb(221, 218,218);
+  border-radius: 5px;
 }
