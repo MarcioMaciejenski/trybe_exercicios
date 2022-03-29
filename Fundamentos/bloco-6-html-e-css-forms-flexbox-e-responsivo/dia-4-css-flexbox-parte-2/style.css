@@ -17,12 +17,14 @@
   .logo-container {
     display: flex;
     justify-content: center;
-    flex-basis: 268px;
+    flex-basis: 268px; /*Exercício 1*/
+    order: 0; /*Exercício 2*/ 
   }
   
   .menu-container {
     display: flex;
-    flex-basis: 500px;
+    flex-basis: 500px; /*Exercício 1*/
+    order: 1;/*Exercício 2*/
   }
   
   .menu-container ul {
