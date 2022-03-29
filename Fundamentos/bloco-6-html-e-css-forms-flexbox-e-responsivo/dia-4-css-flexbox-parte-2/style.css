@@ -26,6 +26,7 @@
     flex-basis: 500px; /*Exercício 1*/
     order: 1;/*Exercício 2*/
     flex-grow: 1; /*Exercício 3*/
+    align-self: center;/*Exercício 4*/
   }
   
   .menu-container ul {
