@@ -67,13 +67,42 @@ const books = [
 const encontraAutor = books.find((valor) => valor.author.birthYear === 1947);
 console.log(`O autor(a) nascido(a) em 1947 é: ${encontraAutor.author.name}`);
 
-// 2 - Retorne o nome do livro de menor nome.Dica: use a função forEach .
+// 2 - Retorne o nome do livro de menor nome.Dica: use a função forEach .Solução 1
 function smallerName() {
-  let nameBook = books[0].name;
+  let nameBook = '';
   // escreva aqui o seu código
-  books.forEach((valor) => valor.name.length < nameBook.length ? nameBook = valor.name : nameBook); 
+  books.forEach((valor) => valor.name.length < nameBook.length || nameBook.length == 0 ? nameBook = valor.name : nameBook);
   // Variável nameBook que receberá o valor do menor nome;
   return nameBook;
 }
 
-console.log(smallerName())
+console.log(smallerName());
+
+// Solução 2
+function smallerName() {
+  let nameBook = books[0].name;
+  // escreva aqui o seu código
+  books.forEach((valor) => valor.name.length < nameBook.length ? nameBook = valor.name : nameBook);
+  // Variável nameBook que receberá o valor do menor nome;
+  return nameBook;
+}
+
+console.log(smallerName());
+
+// 3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
+
+function getNamedBook() {
+  return books.find((valor) => valor.name.length === 26);
+}
+
+console.log(getNamedBook());
