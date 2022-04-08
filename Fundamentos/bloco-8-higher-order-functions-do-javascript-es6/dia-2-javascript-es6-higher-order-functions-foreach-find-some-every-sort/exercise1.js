@@ -67,3 +67,13 @@ const books = [
 const encontraAutor = books.find((valor) => valor.author.birthYear === 1947);
 console.log(`O autor(a) nascido(a) em 1947 é: ${encontraAutor.author.name}`);
 
+// 2 - Retorne o nome do livro de menor nome.Dica: use a função forEach .
+function smallerName() {
+  let nameBook = books[0].name;
+  // escreva aqui o seu código
+  books.forEach((valor) => valor.name.length < nameBook.length ? nameBook = valor.name : nameBook); 
+  // Variável nameBook que receberá o valor do menor nome;
+  return nameBook;
+}
+
+console.log(smallerName())
