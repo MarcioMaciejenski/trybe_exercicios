@@ -51,17 +51,22 @@ console.log(resultadoSorteio(2, confereSorteio));
 const gabarito = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const respostasEstudante = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const corrigeRespostas = (gabarito, respostasEstudante) => {
-  let nota = 0;
-  if (gabarito === respostasEstudante) {
-    nota += 1;
-  } else if (gabarito !== respostasEstudante) {
-    nota -= 0.5
+const corrigeRespostas = (gabarito1, respostasEstudante1) => {
+  if (gabarito1 === respostasEstudante1) {
+    return 1;
+  } else if (gabarito1 === 'N.A') {
+    return 0
   }
-  console.log(nota);
-  return nota;
-}
-corrigeRespostas();
-const contaRespostasCertas = (gabarito, respostasEstudante, corrigeRespostas) => {
+  return -0.5;
+};
 
-}
+const contaRespostasCertas = (gabarito1, respostasEstudante1, callback) => {
+  let nota = 0;
+  for (let index = 0; index < gabarito1.length; index += 1) {
+    const retornanota = callback(gabarito1[index], respostasEstudante1[index]);
+    nota += retornanota;
+  }
+  return `A nota final foi de: ${nota}.`;
+};
+
+console.log(contaRespostasCertas(gabarito, respostasEstudante, corrigeRespostas));
