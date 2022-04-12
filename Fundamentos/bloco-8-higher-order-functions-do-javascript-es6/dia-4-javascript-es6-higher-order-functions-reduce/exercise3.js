@@ -61,8 +61,14 @@ const books = [
   },
 ];
 
-// Crie uma string com os nomes de todas as pessoas autoras.
+// Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram 
+// lançados.
+const expectedResult = 43;
 
-const nomeAutores = books.reduce((acc, nomeAutor) => acc.concat(nomeAutor.author.name,', '), '');
+function mediaIdade() {
+  const somaIdades = books.reduce((acc, idade) => (acc + (idade.releaseYear - idade.author.birthYear)), 0);
+  let mediaIdade = somaIdades / books.length; // books.lenght é o total de objetos do array.
+  return `A idade média dos autores é ${mediaIdade} anos.`;
+}
 
-console.log(nomeAutores);
+console.log(mediaIdade());
