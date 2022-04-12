@@ -61,12 +61,7 @@ const books = [
     },
   ];
   
-  // Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção 
-  // científica ou fantasia.
+  // Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 
-  const autoresFiccaoFantasia = books.filter((book) => {
-    const selecao = book.genre === 'Ficção Científica' || book.genre === 'Fantasia';
-    return selecao;
-  });
-  const autores = autoresFiccaoFantasia.map((autor) => autor.author.name).sort();
-  console.log(autores);
+  const livrosVelhos = books.filter((book) => book.releaseYear < 1962).map((nome) => nome.name);
+  console.log(livrosVelhos);
