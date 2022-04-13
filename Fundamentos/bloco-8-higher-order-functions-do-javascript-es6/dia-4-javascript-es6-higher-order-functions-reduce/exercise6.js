@@ -7,14 +7,35 @@
 const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 function mediaAlunos() {
-  const media = students.map((estudante, index) =>({
-      name: estudante,
-      average: (grades[index].reduce((acc, curr) => acc + curr, 0) / grades[index].length),
+  const media = students.map((estudante, index) => ({
+    name: estudante,
+    average: (grades[index].reduce((acc, curr) => acc + curr, 0) / grades[index].length),
   }))
   return media;
 }
 
 console.log(mediaAlunos());
+
+// Resolução do vídeo gabarito
+function sumGrades(acc, grade) {
+  return acc + grade;
+}
+function calcAvarage(index) {
+  const sum = grades[index].reduce(sumGrades, 0);
+  return sum / grades[index].length;
+}
+function studentAverage() {
+  return students.reduce((acc, student, index) => {
+    const object = {
+      name: student,
+      average: calcAvarage(index)
+    };
+    acc.push(object);
+    return acc;
+  }, []);
+}
+
+console.log(studentAverage());
 
 const expected = [
   { name: 'Pedro Henrique', average: 7.8 },
