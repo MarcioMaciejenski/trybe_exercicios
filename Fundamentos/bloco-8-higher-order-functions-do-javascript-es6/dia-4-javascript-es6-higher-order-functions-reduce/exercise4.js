@@ -81,6 +81,6 @@ function maiorTitulo() {
     }
     return livro;
   });
-  return titulo;
+  return titulo
 }
 console.log(maiorTitulo());
