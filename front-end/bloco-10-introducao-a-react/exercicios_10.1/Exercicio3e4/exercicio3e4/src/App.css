@@ -1,0 +1,32 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+li {
+  list-style-type: none;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgb(187, 154, 111);
+  color: whitesmoke;
+}
+
+.list {
+  margin: 50px;
+  max-width: 30%;
+
+}
+
+.header {
+  text-align: center;
+  background-color: rgb(187, 154, 111);
+  padding: 50px;
+}
