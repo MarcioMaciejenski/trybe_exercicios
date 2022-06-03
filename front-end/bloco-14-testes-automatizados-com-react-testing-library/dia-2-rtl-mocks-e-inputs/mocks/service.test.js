@@ -35,3 +35,31 @@ describe('Testes da função "randomNumber"', () => {
     expect(services.randomNumber).toHaveBeenCalledTimes(1);
   });
 })
+describe('Testes das funções "upperCase","firstLetter" e "concatenate"', () => {
+  it('Verifica se "upperCase" retorna string em caixa baixa', () => {
+    const upperCase = jest.spyOn(services, "upperCase").mockImplementation((a) => a.toLowerCase());
+
+    expect(upperCase("MÁRCIO")).toBe("márcio");
+    expect(services.upperCase).toHaveBeenCalled();
+    expect(services.upperCase).toHaveBeenCalledWith("MÁRCIO");
+  });
+  it('Verifica se "firstLetter" recebe uma string e retorna a última letra', () => {
+    const firstLetter = jest.spyOn(services, "firstLetter").mockImplementation((a) => a.charAt(a.length - 1));
+
+    expect(firstLetter("Grêmio")).toBe("o");
+    expect(services.firstLetter).toHaveBeenCalled();
+    expect(services.firstLetter).toHaveBeenCalledTimes(1);
+  })
+  it('Verifica se "concatenate" recebe três strings e concatena elas', () => {
+    const concatenate = jest.spyOn(services, "concatenate").mockImplementation((a,b,c) => a.concat(b,c));
+    
+    expect(concatenate("Sou ", "aluno ", "Trybe!")).toBe("Sou aluno Trybe!");
+    expect(services.concatenate).toHaveBeenCalled();
+    expect(services.concatenate).toHaveBeenCalledTimes(1);
+  });
+  it('Verifica se "upperCase" volta a retornar strings em caixa alta', () => {
+    services.upperCase.mockRestore();
+
+    expect(services.upperCase("márcio")).toBe("MÁRCIO");
+  });
+})
