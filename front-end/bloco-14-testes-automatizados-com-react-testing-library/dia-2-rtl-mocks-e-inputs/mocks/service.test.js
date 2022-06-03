@@ -65,7 +65,7 @@ describe('Testes das funções "upperCase","firstLetter" e "concatenate"', () =>
   describe('Testes para função que faz requisição para API "dog pictures"', () => {
     services.fetchDog = jest.fn();
     afterEach(services.fetchDog.mockReset);
-    it('Verifica a requisição em caso de retorno válido', async () => {
+    it('Verifica a requisição em caso da promise retorne válido', async () => {
       services.fetchDog.mockResolvedValue("request success");
 
       services.fetchDog();
