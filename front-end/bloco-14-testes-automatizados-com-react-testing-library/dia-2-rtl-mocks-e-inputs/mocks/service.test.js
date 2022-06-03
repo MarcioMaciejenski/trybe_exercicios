@@ -62,4 +62,24 @@ describe('Testes das funções "upperCase","firstLetter" e "concatenate"', () =>
 
     expect(services.upperCase("márcio")).toBe("MÁRCIO");
   });
-})
+  describe('Testes para função que faz requisição para API "dog pictures"', () => {
+    services.fetchDog = jest.fn();
+    afterEach(services.fetchDog.mockReset);
+    it('Verifica a requisição em caso de retorno válido', async () => {
+      services.fetchDog.mockResolvedValue("request success");
+
+      services.fetchDog();
+      expect(services.fetchDog).toHaveBeenCalled();
+      expect(services.fetchDog).toHaveBeenCalledTimes(1);
+      await expect(services.fetchDog()).resolves.toBe("request success");
+      expect(services.fetchDog).toHaveBeenCalledTimes(2);
+    });
+    it('Verifica requisição em caso da promise seja rejeitada', async () => {
+      services.fetchDog.mockRejectedValue("request failed");
+
+      expect(services.fetchDog).toHaveBeenCalledTimes(0);
+      await expect(services.fetchDog()).rejects.toMatch("request failed");
+      expect(services.fetchDog).toHaveBeenCalledTimes(1);
+    });
+  });
+});
