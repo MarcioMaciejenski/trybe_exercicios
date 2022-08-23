@@ -29,4 +29,14 @@ app.get('/filter/myActivities', (req, res) => {
   res.status(200).json({ activities: filterActivity });
 });
 
+/* Crie um endpoint do tipo GET com a rota /search/myActivities, que possa listar todas as atividades filtradas por um termo específico do array. A rota deve receber a informação por query e a chave deve-se chamar q. A chave vai trazer consigo valor de 'cachorro' por exemplo, e o filtro deve trazer apenas as atividades com esse termo, se não encontrar, traga um array vazio 🚀 */
+app.get('/search/myActivities', (req, res) => {
+  const { q } = req.query;
+  let filteredActivities = [];
+
+  if (q) {
+    filteredActivities = activities.filter((activity) => activity.description.includes(q));
+  }
+  res.status(200).json({ activities: filteredActivities });
+});
 module.exports = app;
